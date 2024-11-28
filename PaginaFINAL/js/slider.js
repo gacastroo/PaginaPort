@@ -12,16 +12,16 @@ const desc3 = document.getElementById('desc3');
 
 // Imágenes para "3D"
 const images3D = [
-  '/imagenes/project1-3d.jpg',
-  '/imagenes/project2-3d.jpg',
-  '/imagenes/project3-3d.jpg',
+  './imagenes/project1-3d.jpg',
+  './imagenes/project2-3d.jpg',
+  './imagenes/project3-3d.jpg',
 ];
 
 // Imágenes para "WEB"
 const imagesWeb = [
-  '/imagenes/project1-web.jpg',
-  '/imagenes/project2-web.jpg',
-  '/imagenes/project3-web.jpg',
+  './imagenes/project1-web.jpg',
+  './imagenes/project2-web.jpg',
+  './imagenes/project3-web.jpg',
 ];
 
 // Títulos para "3D"
