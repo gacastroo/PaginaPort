@@ -1,11 +1,11 @@
 document.addEventListener('DOMContentLoaded', () => {
-    // Seleccionar elementos
-    const toggleMenuButton = document.getElementById('toggleMenuButton');
-    const menuOpciones = document.getElementById('menuOpciones');
-    const btnAumentarTexto = document.getElementById('btnAumentarTexto');
-    const btnReducirTexto = document.getElementById('btnReducirTexto');
-    const btnAltoContraste = document.getElementById('btnAltoContraste');
-    const btnResetearEstilos = document.getElementById('btnResetearEstilos');
+    // Seleccionar elementos con querySelector
+    const toggleMenuButton = document.querySelector('#toggleMenuButton');
+    const menuOpciones = document.querySelector('#menuOpciones');
+    const btnAumentarTexto = document.querySelector('#btnAumentarTexto');
+    const btnReducirTexto = document.querySelector('#btnReducirTexto');
+    const btnAltoContraste = document.querySelector('#btnAltoContraste');
+    const btnResetearEstilos = document.querySelector('#btnResetearEstilos');
 
     // Mostrar/ocultar el menú
     toggleMenuButton.addEventListener('click', () => {

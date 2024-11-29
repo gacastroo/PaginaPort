@@ -11,11 +11,8 @@
         
         <link rel="stylesheet" href="./css/switch.css">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
-        
-        <head>
-            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
-        </head>
-        
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous"> 
+        <script type="module" src="https://cdn.jsdelivr.net/npm/@google/model-viewer/dist/model-viewer.min.js"></script>       
     </head>
     
 <body>
@@ -130,24 +127,35 @@
                 <img src="./imagenes/project1-3d.jpg" alt="Proyecto 1" class="card-img" id="img1">
                 <div class="card-content">
                     <h3 id="title1">Laura Kinney</h3>
-                    <p id="desc1">Descripción breve del proyecto 1.</p>
+                    <p id="desc1">Lorem ipsum dolor sit amet...</p>
                 </div>
             </div>
             <div class="trabajo-card">
                 <img src="./imagenes/project2-3d.jpg" alt="Proyecto 2" class="card-img" id="img2">
                 <div class="card-content">
                     <h3 id="title2">Wolverine</h3>
-                    <p id="desc2">Descripción breve del proyecto 2.</p>
+                    <p id="desc2">Lorem ipsum dolor sit amet...</p>
                 </div>
             </div>
             <div class="trabajo-card">
                 <img src="./imagenes/project3-3d.jpg" alt="Proyecto 3" class="card-img" id="img3">
                 <div class="card-content">
                     <h3 id="title3">Deadpool</h3>
-                    <p id="desc3">Descripción breve del proyecto 3.</p>
+                    <p id="desc3">Lorem ipsum dolor sit amet...</p>
                 </div>
             </div>
-        </div>
+            <div class="trabajo-card">
+                <model-viewer
+                    src="./assets/arcane_fractured_jinx.glb"
+                    ar
+                    ar-modes="webxr scene-viewer quick-look"
+                    camera-controls
+                    tone-mapping="neutral"
+                    shadow-intensity="1"
+                    autoplay>
+                </model-viewer>
+            </div>
+        </div>        
     </section>
 
     <!-- Sección de About -->

@@ -32,16 +32,16 @@ const titlesWeb = ['Memory Game ', 'Bizum app', 'Pagina X-MEN'];
 
 // Descripciones para "3D"
 const descs3D = [
-  'Descripción breve del proyecto 3D 1.',
-  'Descripción breve del proyecto 3D 2.',
-  'Descripción breve del proyecto 3D 3.',
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat ipsum turpis, a ultrices leo pellentesque sed. Nam ut lectus ante. Vestibulum eget porta nisi. Duis pulvinar est eu ex fringilla ornare. Aenean faucibus maximus tellus sed lacinia. Praesent venenatis neque ac magna dictum dignissim. Suspendisse eleifend felis sed sapien finibus, ut posuere est sagittis. Praesent ex elit, consequat eu varius sit amet, iaculis eget enim. Sed sem metus, volutpat in est nec, faucibus hendrerit orci.',
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat ipsum turpis, a ultrices leo pellentesque sed. Nam ut lectus ante. Vestibulum eget porta nisi. Duis pulvinar est eu ex fringilla ornare. Aenean faucibus maximus tellus sed lacinia. Praesent venenatis neque ac magna dictum dignissim. Suspendisse eleifend felis sed sapien finibus, ut posuere est sagittis. Praesent ex elit, consequat eu varius sit amet, iaculis eget enim. Sed sem metus, volutpat in est nec, faucibus hendrerit orci.',
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat ipsum turpis, a ultrices leo pellentesque sed. Nam ut lectus ante. Vestibulum eget porta nisi. Duis pulvinar est eu ex fringilla ornare. Aenean faucibus maximus tellus sed lacinia. Praesent venenatis neque ac magna dictum dignissim. Suspendisse eleifend felis sed sapien finibus, ut posuere est sagittis. Praesent ex elit, consequat eu varius sit amet, iaculis eget enim. Sed sem metus, volutpat in est nec, faucibus hendrerit orci.',
 ];
 
 // Descripciones para "WEB"
 const descsWeb = [
-  'Descripción breve del proyecto web 1.',
-  'Descripción breve del proyecto web 2.',
-  'Descripción breve del proyecto web 3.',
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat ipsum turpis, a ultrices leo pellentesque sed. Nam ut lectus ante. Vestibulum eget porta nisi. Duis pulvinar est eu ex fringilla ornare. Aenean faucibus maximus tellus sed lacinia. Praesent venenatis neque ac magna dictum dignissim. Suspendisse eleifend felis sed sapien finibus, ut posuere est sagittis. Praesent ex elit, consequat eu varius sit amet, iaculis eget enim. Sed sem metus, volutpat in est nec, faucibus hendrerit orci.',
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat ipsum turpis, a ultrices leo pellentesque sed. Nam ut lectus ante. Vestibulum eget porta nisi. Duis pulvinar est eu ex fringilla ornare. Aenean faucibus maximus tellus sed lacinia. Praesent venenatis neque ac magna dictum dignissim. Suspendisse eleifend felis sed sapien finibus, ut posuere est sagittis. Praesent ex elit, consequat eu varius sit amet, iaculis eget enim. Sed sem metus, volutpat in est nec, faucibus hendrerit orci.',
+  'Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent placerat ipsum turpis, a ultrices leo pellentesque sed. Nam ut lectus ante. Vestibulum eget porta nisi. Duis pulvinar est eu ex fringilla ornare. Aenean faucibus maximus tellus sed lacinia. Praesent venenatis neque ac magna dictum dignissim. Suspendisse eleifend felis sed sapien finibus, ut posuere est sagittis. Praesent ex elit, consequat eu varius sit amet, iaculis eget enim. Sed sem metus, volutpat in est nec, faucibus hendrerit orci.',
 ];
 
 // Evento para escuchar cambios en el slider
