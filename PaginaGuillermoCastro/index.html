@@ -1,0 +1,178 @@
+    <!DOCTYPE html>
+    <html lang="es">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+            <title>Mi Portafolio</title>
+        
+            <!-- Estilos CSS -->
+            <link rel="stylesheet" href="./css/styles.css">
+            
+            <link rel="stylesheet" href="./css/switch.css">
+            <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
+            
+            <head>
+                <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
+            </head>
+            
+        </head>
+        
+    <body>
+
+        <header id="header">
+            <nav>
+                <div class="header-container" style="display:flexbox; align-items: center;">
+                    <button id="toggleMenuButton">
+                        <i class="fas fa-universal-access"></i> Accesibilidad
+                    </button>
+                    
+                    <!-- Menú de accesibilidad -->
+                    <div id="menuOpciones" class="accessibility-menu" style="display: none;">
+                        <button id="btnAumentarTexto" class="accessibility-button">
+                            <i class="fas fa-font"></i> Aumentar texto
+                        </button>
+                        <button id="btnReducirTexto" class="accessibility-button">
+                            <i class="fas fa-font"></i> Reducir texto
+                        </button>
+                        <button id="btnAltoContraste" class="accessibility-button">
+                            <i class="fas fa-adjust"></i> Modo alto contraste
+                        </button>
+                        <button id="btnResetearEstilos" class="accessibility-button">
+                            <i class="fas fa-redo"></i> Restablecer
+                        </button>
+                    </div>            
+                    <img src="./imagenes/logo.png" alt="Logo del sitio" class="logo">
+                    <ul class="nav-list">
+                        <li><a href="#inicio">Inicio</a></li>
+                        <li><a href="#trabajos">Proyectos</a></li>
+                        <li><a href="#contacto">Contacto</a></li>
+                        <li><a href="#about">About</a></li>
+                        <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                        <button id="toggleMode">
+                            <i class="fas fa-moon"></i>
+                        </button>
+                    </ul>
+                </div>
+            </nav>
+        </header>
+
+        <main>
+            
+            <section id="inicio">
+                <div class="hero-image">
+                    <h1>Bienvenidos a mi Portafolio</h1>
+                    <a href="#trabajos" class="btn">Ver Proyectos</a>
+                </div>
+            </section>
+
+            <h3 class="estudios-title">Estudios</h3>
+
+            <div class="estudios-container">
+                <div class="estudios-images">
+                    <img src="./imagenes/animacionder.png" alt="Animación 3D" class="estudio-imagen">
+                    <div class="estudios-text">
+                        <ul>
+                            <li><span class="rojo"> Grado Superior:</span><br> Animación 3D, juegos y entornos interactivos</li>
+                            <li class="estudios-text2"><span class="rojo"> Grado Superior:</span><br>Desarrollo de Aplicaciones Web</li>
+                        </ul>
+                    </div>
+                    <img src="./imagenes/programacioniz.png" alt="Programación Web" class="estudio-imagen">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Proyectos -->
+        <section id="trabajos">
+            <h2 class="trabajos-title">Proyectos</h2>
+            <label class="switch">
+                <input type="checkbox" id="slider">
+                <span class="slider"></span>
+                <span class="label-left">3D</span>
+                <span class="label-right">WEB</span>
+            </label>
+            <div class="trabajos-grid">
+                <div class="trabajo-card" id="card1">
+                    <img src="./imagenes/project1-3d.jpg" alt="Proyecto 1" class="card-img" id="img1">
+                    <div class="card-content">
+                        <h3 id="title1">Laura Kinney</h3>
+                        <p id="desc1">Descripción breve del proyecto 1.</p>
+                    </div>
+                </div>
+                <div class="trabajo-card" id="card2">
+                    <img src="./imagenes/project2-3d.jpg" alt="Proyecto 2" class="card-img" id="img2">
+                    <div class="card-content">
+                        <h3 id="title2">Wolverine</h3>
+                        <p id="desc2">Descripción breve del proyecto 2.</p>
+                    </div>
+                </div>
+                <div class="trabajo-card" id="card3">
+                    <img src="./imagenes/project3-3d.jpg" alt="Proyecto 3" class="card-img" id="img3">
+                    <div class="card-content">
+                        <h3 id="title3">Deadpool</h3>
+                        <p id="desc3">Descripción breve del proyecto 3.</p>
+                    </div>
+                </div>
+            </div>
+            </div>
+        </section>
+
+        <!-- Sección de About -->
+        <section id="about">
+            <h2 class="about-title">Sobre mí</h2>
+            <div class="about-container">
+                <div class="about-text">
+                    <p>Soy un desarrollador web y animador 3D con pasión por crear experiencias visuales impactantes y funcionales.</p>
+                </div>
+                <div class="about-photo">
+                    <img src="./imagenes/fotocreador.PNG" style="border-radius: 380%;" alt="Foto de perfil" class="about-img">
+                </div>
+            </div>
+        </section>
+
+        <!-- Sección de Contacto -->
+        <section id="contacto">
+            <h2 class="contacto-title">Contacto</h2>
+            <div class="contact-container">
+                <div class="contact-info">
+                    <img src="./imagenes/logo.png" alt="Foto del creador">
+                    <p>Encuéntrame en:</p>
+                    <p>Dirección: Calle Ejemplo 123</p>
+                    <p>Email: correo@ejemplo.com</p>
+                </div>
+                <form action="#" method="POST" class="contact-form">
+                    <label for="nombre">Nombre:</label>
+                    <input type="text" id="nombre" name="nombre" required>
+                    
+                    <label for="email">Correo Electrónico:</label>
+                    <input type="email" id="email" name="email" required>
+                    
+                    <label for="mensaje">Mensaje:</label>
+                    <textarea id="mensaje" name="mensaje" rows="4" required></textarea>
+                    
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
+        </section>
+
+        </main>
+
+        <footer id="footer">
+            <div class="footer-container">
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#trabajos">Proyectos</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                    <li><a href="#about">About</a></li>
+                    <li><a href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a></li>
+                </ul>
+                <p>&copy; 2024 Portafolio. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+
+        <script src="./js/slider.js"></script>
+        <script src="./js/formvalidation.js"></script>
+        <script src="./js/modoscuro.js"></script>
+        <script src="./js/menu-accesibilidad.js"></script>
+    </body>
+    </html>
