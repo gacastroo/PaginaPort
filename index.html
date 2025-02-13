@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="es">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Mi Portafolio</title>
+    
+        <!-- Estilos CSS -->
+        <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+        <link rel="stylesheet" href="./css/quotes.css">
+        <link rel="stylesheet" href="./css/styles.css">
+        <link rel="stylesheet" href="./css/babel.css">
+        <link rel="stylesheet" href="./css/switch.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">
+        <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css" crossorigin="anonymous">     
+    </head>
+    
+    <body>
+        <!-- Redes sociales flotantes -->
+        <div class="position-fixed top-50 start-0 translate-middle-y p-3" id="redes">
+            <div class="mb-3 text-center">
+                <a href="https://www.instagram.com/usuario" target="_blank" class="d-inline-block bg-danger rounded-circle p-3 mb-2" id="instagrama">
+                    <i class="fab fa-instagram text-white fs-5" id="instagram"></i>
+                </a>
+            </div>
+            <div class="mb-3 text-center">
+                <a href="https://twitter.com/usuario" target="_blank" class="d-inline-block bg-primary rounded-circle p-3 mb-2" id="twittera">
+                    <i class="fab fa-twitter text-white fs-5" id="twitter"></i>
+                </a>
+            </div>
+            <div class="text-center">
+                <a href="https://www.linkedin.com/in/usuario" target="_blank" class="d-inline-block bg-primary rounded-circle p-3" id="linkedina">
+                    <i class="fab fa-linkedin text-white fs-5" id="linkedin"></i>
+                </a>
+            </div>
+        </div>
+        
+
+        <!-- Sección de header -->
+        <header id="header" class="bg-dark text-white py-3 fixed-top w-100">
+            <nav class="navbar navbar-expand-lg navbar-dark">
+                <div class="container d-flex justify-content-between align-items-center">
+                    
+                    <!-- Botón de accesibilidad (Izquierda) -->
+                    <div class="d-flex align-items-center">
+                        <button id="toggleMenuButton" class="btn btn-light me-2">
+                            <i class="fas fa-universal-access" id="iconoaccesibilidad"></i>
+                            Accesibilidad
+                        </button>                    
+                        <div class="menu-opciones" id="menuOpciones" style="display: none;">
+                            <button id="btnAumentarTexto" class="btn btn-outline-light btn-sm m-1">Aumentar Texto</button>
+                            <button id="btnReducirTexto" class="btn btn-outline-light btn-sm m-1">Reducir Texto</button>
+                            <button id="btnAltoContraste" class="btn btn-outline-light btn-sm m-1">Alto Contraste</button>
+                            <button id="btnResetearEstilos" class="btn btn-outline-light btn-sm m-1">Restablecer</button>
+                            <button id="changeLanguage" class="btn btn-outline-light btn-sm m-1"></button>
+                        </div>
+                    </div>
+
+                    <!-- Logo (Centrado) -->
+                    <a class="navbar-brand mx-auto" href="#inicio">
+                        <img src="./imagenes/logo.png" alt="Logo del sitio" class="logo" height="60px">
+                    </a>
+
+                    <!-- Botón de menú hamburguesa (Móvil) -->
+                    <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                        aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                        <span class="navbar-toggler-icon"></span>
+                    </button>
+                    <a>#GuillermoCastro</a>                 
+                    <!-- Menú horizontal -->
+                    <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
+                        <ul class="navbar-nav flex-row">
+                            <li class="nav-item">
+                                <a href="#estudios" class="nav-link text-white px-2"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#trabajos" class="nav-link text-white px-2"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#about" class="nav-link text-white px-2"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="#contacto" class="nav-link text-white px-2"></a>
+                            </li>
+                            <li class="nav-item">
+                                <a href="https://github.com" target="_blank" rel="noopener noreferrer" class="nav-link text-white px-2"></a>
+                            </li>
+                            <li class="nav-item">
+                                <li class="nav-item d-flex align-items-center">
+                                    <button id="toggleMode" class="btn">
+                                        <i id="modeIcon" class="fas fa-moon"></i>
+                                    </button>
+                                </li>
+                                
+                            </li>
+                        </ul>
+                    </div>
+
+                </div>
+            </nav>
+        </header>
+
+
+
+
+        
+
+        <main>
+        <!-- Hero Section -->
+            <section id="inicio" class="vh-100 d-flex align-items-center justify-content-center text-center text-white" style="background-image: url('./imagenes/hero.jpg'); background-size:cover; background-position: 86% 20%;">
+                <section class="hero">
+                    <div class="typing-animation">
+                        <span id="quote"></span>
+                      </div>
+                    <a href="#trabajos" id="Verproyectos" class="btn btn-primary btn-lg mt-4">Ver Proyectos</a>
+                </section>
+            </section>
+            <a id="estudios"></a>
+            <br>
+                <!-- Sección de Estudios -->
+                <section>
+                    <div class="container">
+                        <h1 class="text-center mb-4" id="Estudiostt"></h1>
+                        <div class="row align-items-center">
+                            <div class="col-md-4">
+                                <img src="./imagenes/animacionder.png" alt="Animación 3D" class="img-fluid rounded" id="animacionder">
+                            </div>
+                            <div class="col-md-4 text-center">
+                                <ul class="list-unstyled lead">
+                                    <li id="degree1"></strong></li>
+                                    <li id="degree2"></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-4">
+                                <img src="./imagenes/programacioniz.png" alt="Programación Web" class="img-fluid rounded" id="animacioniz">
+                            </div>
+                        </div>
+                    </div>
+                    <a id="trabajos"></a>
+                </section>
+
+            <!-- Sección de Proyectos -->
+            <!-- Sección de Proyectos -->
+
+            <section class="py-5">
+                <div class="container">
+                    <h1 class="trabajos-title text-center mb-4"></h1>
+                    
+                    <!-- Switch para cambiar entre 3D y WEB -->
+                    <div class="d-flex justify-content-center mb-4">
+                        <div id="outerContainer">
+                            <div class="select-left" id="container">
+                              <div id="item"></div>
+                              <div class="left">
+                                <span>WEB</span>
+                              </div>
+                              <div class="right">
+                                <span>3D</span>
+                              </div>
+                            </div>
+                          </div>
+                    </div>
+
+                    <!-- Grilla de proyectos -->
+                    <div class="row justify-content-center">
+                        <div class="col-md-4 mb-4">
+                            <div class="trabajo-card">
+                                <img src="./imagenes/project1-3d.jpg" alt="Proyecto 1" class="card-img" id="img1">
+                                <div class="card-content">
+                                    <h3 id="title1">Laura Kinney</h3>
+                                    <p id="desc1">Lorem ipsum dolor sit amet...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="trabajo-card">
+                                <img src="./imagenes/project2-3d.jpg" alt="Proyecto 2" class="card-img" id="img2">
+                                <div class="card-content">
+                                    <h3 id="title2">Wolverine</h3>
+                                    <p id="desc2">Lorem ipsum dolor sit amet...</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="col-md-4 mb-4">
+                            <div class="trabajo-card">
+                                <img src="./imagenes/project3-3d.jpg" alt="Proyecto 3" class="card-img" id="img3">
+                                <div class="card-content">
+                                    <h3 id="title3">Deadpool</h3>
+                                    <p id="desc3">Lorem ipsum dolor sit amet...</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <a id="about"></a>
+            </section>
+            <!-- Sección de About -->
+            <section class="py-5">
+                <div class="container">
+                    <h1 class="about-title text-center mb-4"></h1>
+                    <div class="row align-items-center">
+                        <div class="col-md-6">
+                            <p class="about-text lead">
+                            </p>
+                        </div>
+                        <div class="col-md-6 text-center">
+                            <img src="./imagenes/fotocreador.PNG" alt="Foto de perfil" class="about-img img-fluid rounded-circle">
+                        </div>
+                    </div>
+                </div>
+                <a id="contacto"></a>
+            </section>
+
+            <!-- Sección de Contacto -->
+            <section class="py-5">
+                <div class="container">
+                    <h1 class="contacto-title text-center mb-4"></h1>
+                    <div class="row align-items-center">
+                        <!-- Información de contacto -->
+                        <div class="col-md-5 mb-4 mb-md-0">
+                            <p id="encuentrame"></p>
+                            <div class="map-container">
+                                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d6074.928573730096!2d-3.6250333881180565!3d40.420717071319835!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xd422f78a9a31877%3A0x72e8a12612fccf84!2sIES%20Francisco%20de%20Quevedo!5e0!3m2!1ses!2ses!4v1739213928204!5m2!1ses!2ses"
+                                    allowfullscreen="" 
+                                    loading="lazy" 
+                                    referrerpolicy="no-referrer-when-downgrade">
+                                </iframe>
+                            </div>
+                            
+                            
+                            <p id="direccion"></p>
+                            <p id="email"></p>
+                        </div>
+                        
+                        <!-- Formulario de contacto -->
+                        <div class="col-md-7">
+                            <form action="#" method="POST" class="contact-form">
+                                <div class="mb-3">
+                                    <label for="nombre" class="form-label" id="nombre1"></label>
+                                    <input type="text" id="nombre" name="nombre" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="email" class="form-label" id="email1"></label>
+                                    <input type="email" id="email" name="email" class="form-control" required>
+                                </div>
+                                <div class="mb-3">
+                                    <label for="mensaje" class="form-label" id="mensaje1"></label>
+                                    <textarea id="mensaje" name="mensaje" class="form-control" rows="4" required></textarea>
+                                </div>
+                                <button type="submit" class="btn btn-primary w-100" id="botonenviar"></button>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </section>
+            <section id="quotes">
+                <div class="container">
+                    <div class="quote-box">
+                    <div class="quote">
+                        <blockquote>
+                        </blockquote>
+                    </div>
+                    <div class="name">
+                        Donal knuth
+                    </div>
+                    </div>
+                </div>
+            </section>
+
+            <section id="tech">
+                <div class="marquee">
+                    <ul class="marquee-content">
+                        <li><i class="fab fa-html5"></i></li>
+                        <li><i class="fab fa-css3"></i></li>
+                        <li><i class="fab fa-js"></i></li>
+                        <li><i class="devicon-spring-original"></i></li>
+                        <li><i class="fab fa-github"></i></li>
+                    </ul>
+                </div>
+            </section>
+            
+        </main>
+        <!-- Sección de Footer -->
+
+        <footer id="footer" class="bg-dark text-white py-4 ">
+            <div class="container text-center">
+                <ul class="nav justify-content-center mb-3">
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#estudios" id="estudiosFooter">Estudios</a>
+                        <i class="fas fa-book fa-2x"></i>  <!-- Tamaño 3x -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#trabajos" id="trabajosFooter">Proyectos</a>
+                        <i class="fas fa-rocket fa-2x"></i>  <!-- Tamaño 2x -->
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#about" id="aboutFooter">About</a>
+                        <i class="fas fa-info-circle fa-2x"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="#contacto" id="contactoFooter">Contacto</a>
+                        <i class="fas fa-phone fa-2x"></i>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link text-white" href="https://github.com" target="_blank" rel="noopener noreferrer">GitHub</a>
+                        <i class="fab fa-github fa-2x"></i>  <!-- Tamaño 2x -->
+                    </li>
+                </ul>
+                <p class="mt-3" id="copyr">&copy; 2025 Portafolio. Todos los derechos reservados.</p>
+            </div>
+        </footer>
+        
+
+        <!-- Scripts -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+        <script src="./js/slider.js"></script>
+        <script src="./js/modoscuro.js"></script>
+        <script src="./js/menu-accesibilidad.js"></script>
+        <script src="./js/babel.js"></script>
+        <script src="./js/jqueryeffects.js"></script>
+        <script src="./js/quotes.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.6.0/i18next.min.js"></script>
+        <script src="./js/i18n.js"></script>
+    </body>
+</html>

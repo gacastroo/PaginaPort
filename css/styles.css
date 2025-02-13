@@ -1,0 +1,377 @@
+/* Definición de variables de color */
+/* Definición de variables de color */
+:root {
+    --primary-color: #1E88E5; /* Azul ligeramente más oscuro */
+    --secondary-color: #B0B0B0; /* Gris más neutro */
+    --dark-background: #2C2C2C; /* Fondo oscuro ligeramente más suave */
+    --dark-card-background: #1A1D21; /* Fondo de tarjeta oscuro más oscuro */
+    --light-background: #F1F3F5; /* Fondo claro más suave */
+    --text-color-light: rgb(250, 250, 250); /* Blanco más cálido */
+    --text-color-dark: #f5f5f5; /* Blanco más neutro */
+    --accent-color:yellow; /* Amarillo con más opacidad */
+    --bg-color-acces:rgba(219, 219, 5, 0.61);
+    --ac-color-a: #00aaff;
+}
+
+
+/* Elementos del switch */
+* {
+    margin: 0;
+    padding: 0; 
+    box-sizing: border-box;
+}
+
+
+#instagram:hover, #twitter:hover, #linkedin:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+}
+#Verproyectos:hover {
+    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+
+}
+
+
+/* Hover para los elementos del nav */
+.nav-link:hover {
+    color: var(--hover-color) !important;
+    text-decoration: underline;
+    transition: color 0.3s ease, text-decoration 0.3s ease;
+}
+
+section {
+    margin: 5%;
+}
+
+section#inicio {
+    margin: 0;
+    padding: 0;
+}
+
+section#tech {
+    margin: 0;
+}
+
+
+
+.menu-accesibilidad {
+    display: flex;
+    align-items: center;
+}
+
+
+
+.hero-image {
+    background-image: url('../imagenes/hero.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: var(--text-color-light);
+}
+
+.trabajos-title {
+    font-size: 2rem;
+    margin-bottom: 2rem;
+}
+
+.trabajo-card {
+    padding: 2%;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    background-color: var(--light-background);
+}
+
+.trabajo-card:hover {
+    transform: translateY(-10px) scale(1.05);
+    box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+}
+
+.card-img {
+    width: 100%;
+    height: 400px;
+    object-fit: scale-down;
+}
+
+.card-content {
+    padding: 1rem;
+    text-align: center;
+}
+
+.card-content h3 {
+    font-size: 1.2rem;
+    margin-bottom: 0.5rem;
+}
+
+
+
+.label-left, .label-right {
+    font-size: 0.8rem;
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+}
+
+.label-left {
+    left: 5px;
+}
+
+.label-right {
+    right: 5px;
+}
+
+
+@media (max-width: 768px) {
+    .estudios-images {
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    
+    #redes {
+        display: none;
+    }
+
+    #animacionder, #animacioniz {
+        transform: none !important;
+    }
+    
+
+    .us_mobile_hide {
+        display: none;
+    }
+
+}
+
+[data-theme='dark'] {
+    background-color: var(--dark-background);
+    color: var(--text-color-dark);
+}
+
+[data-theme='dark'] .trabajo-card {
+    background-color: var(--dark-card-background);
+    color: var(--text-color-dark);
+}
+
+#toggleMenuButton {
+    background-color: rgb(168, 67, 67);
+    color: var(--text-color-light);
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-right: 140px;
+}
+
+#toggleMenuButton:hover {
+    background-color: var(--bg-color-acces);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#toggleMenuButton i {
+    font-size: 2.5rem;
+}
+
+
+#animacionder:hover,#animacioniz:hover {
+    transform:scale(1.2);
+}
+
+.map-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 20px auto;
+    max-width: 400px; /* Ancho máximo */
+    border-radius: 10px;
+    overflow: hidden;
+    transition: box-shadow 0.5s ease-in-out, border 0.5s ease-in-out;
+}
+
+.map-container iframe {
+    width: 100%;
+    height: 300px;
+    border: 0;
+    border-radius: 10px;
+    transition: transform 0.3s ease-in-out;
+}
+
+
+.map-container:hover iframe {
+    transform: scale(1.02); /* Ligero aumento de tamaño */
+}
+
+/* ////////////////////////////////////// Modo alto contraste ///////////////////////////////////////////////////////////////////////////////////////////////// */
+.alto-contraste {
+    background-color: black !important;
+    color: var(--accent-color) !important;
+}
+
+.alto-contraste #instagrama,#twittera,#linkedina {
+    background-color: black;
+}
+
+/* Encabezado */
+.alto-contraste header {
+    background-color: black !important;
+    color: var(--accent-color) !important;
+}
+
+/* Footer */
+.alto-contraste footer {
+    background-color: black !important;
+    color: var(--accent-color) !important;
+}
+
+/* Estilos de enlaces */
+.alto-contraste a {
+    color: var(--accent-color) !important;
+    text-decoration: underline;
+}
+
+.alto-contraste a:hover {
+    color: var(--ac-color-a) !important;
+}
+
+/* Botón de accesibilidad */
+.alto-contraste #toggleMenuButton {
+    background-color: var(--accent-color) !important;
+    color: black !important;
+}
+
+/* Menú de accesibilidad */
+.alto-contraste #menuOpciones {
+    background-color: black !important;
+    color: var(--accent-color) !important;
+}
+
+.alto-contraste #menuOpciones button {
+    background-color: var(--accent-color) !important;
+    color: black !important;
+}
+
+.alto-contraste #quote {
+    color: var(--accent-color);
+}
+
+.alto-contraste #Verproyectos {
+    background-color: black;
+    color: var(--accent-color);
+    border: solid var(--accent-color) 3px;
+}
+
+/* Tarjetas de proyectos */
+.alto-contraste .trabajo-card {
+    background-color: black !important;
+    color: var(--accent-color) !important;
+    border: 2px solid var(--accent-color) !important;
+}
+
+.alto-contraste iframe {
+    border: 3px solid var(--accent-color) !important ;
+}
+
+
+.alto-contraste #botonenviar {
+    background-color: black;
+    color: var(--accent-color);
+    border: 2px solid var(--accent-color) !important;
+}
+
+/* Párrafos del footer */
+.alto-contraste footer p {
+    color: var(--accent-color) !important;
+}
+
+/* Íconos */
+.alto-contraste i {
+    color: var(--accent-color) !important;
+}
+
+/* Input y textarea en modo alto contraste */
+.alto-contraste input,
+.alto-contraste textarea {
+    background-color: black !important;
+    color: var(--accent-color) !important;
+    border: 1px solid var(--accent-color) !important;
+}
+
+
+
+/* Modo alto contraste para los iconos flotantes */
+.alto-contraste #redes a {
+    background-color: black !important; /* Fondo negro */
+    border: 2px solid var(--accent-color) !important; /* Borde amarillo */
+}
+
+/* Cambiar color de los íconos dentro de los botones */
+.alto-contraste #redes i {
+    color: var(--accent-color) !important;
+}
+
+/* Aplica hover al enlace y al icono dentro */
+.alto-contraste #redes a:hover,
+.alto-contraste #redes a:hover i {
+    background-color: var(--accent-color) !important;
+    color: black !important;
+    transform: scale(1.2);
+}
+
+.alto-contraste .left, .alto-contraste .right {
+    color: var(--accent-color);
+}
+.alto-contraste #container {
+    background-color: black;
+    border: solid 2px var(--accent-color);
+}
+
+.alto-contraste #container.select-right #item, .alto-contraste #item {
+    background-color: black;
+    border: solid 2px var(--accent-color); 
+}
+
+.alto-contraste #container:hover {
+    background-color:black;
+  }
+
+
+  
+
+#toggleMode {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#toggleMode i {
+    color: white; /* Luna blanca en modo claro */
+    transition: color 0.3s ease;
+}
+
+#toggleMode:hover {
+    transform: scale(1.2);
+}
+
+/* En modo oscuro, el sol será amarillo */
+[data-theme='dark'] #modeIcon {
+    color: var(--accent-color) !important;
+}
+
+
+
+
+

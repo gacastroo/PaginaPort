@@ -1,0 +1,82 @@
+/* Definición de colores */
+:root {
+  --darkblue: #2C3E50;
+  --lightred: #c73737;
+  --border: #D5DBDB;
+  --switch-bg: #ECF0F1;
+  --switch-hover: #BDC3C7;
+  --text-color: #2C3E50;
+}
+
+/* Estilos generales */
+body {
+  margin: 0;
+  font-family: "Arial", sans-serif;
+  background-color: #F8F9FA;
+}
+
+/* Contenedor del switch */
+#container {
+  position: relative;
+  width: 220px;
+  height: 55px;
+  background-color: var(--switch-bg);
+  border: 2px solid var(--border);
+  border-radius: 30px;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  transition: background-color 0.3s ease;
+  overflow: hidden;
+  padding: 5px;
+}
+
+#container:hover {
+  background-color: var(--switch-hover);
+}
+
+/* Elemento deslizante */
+#item {
+  position: absolute;
+  width: 100px;
+  height: 45px;
+  background-color: var(--darkblue);
+  border-radius: 22px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: transform 0.3s ease-in-out, background-color 0.3s ease-in-out;
+  font-size: 22px;
+  color: white;
+  left: 5px;
+}
+
+#container.select-right #item {
+  background-color: var(--lightred);
+  left: -5px;
+}
+
+/* Icono dentro del item */
+#item::before {
+  content: "\1F3A8"; 
+  text-align: center;
+}
+
+#container.select-right #item::before {
+  content: "\1F4BB"; 
+  padding-left: 0px;
+}
+
+/* Texto en los lados */
+.left, .right {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 50%;
+  height: 100%;
+  font-size: 16px;
+  font-weight: 600;
+  color: var(--text-color);
+}

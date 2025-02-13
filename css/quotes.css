@@ -1,0 +1,56 @@
+@import url(https://fonts.googleapis.com/css?family=Karla);
+#quote{
+    font-size: 50px;
+}
+
+.cursor {
+    font-size: 50px;
+}
+
+@keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-webkit-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+@-moz-keyframes blink{
+    0% { opacity:1; }
+    50% { opacity:0; }
+    100% { opacity:1; }
+}
+
+.cursor {
+    animation: blink 0.7s infinite;
+}
+
+   
+.quote {
+    background-color: #ffffff;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
+    color: #000000;
+    margin: 0;
+    padding: 20px;
+    font-size: 20px;
+    text-align: center;
+  }
+  
+  .name {
+    background-color: #333;
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    color: #fff;
+    font-size: 20px;
+    padding: 20px;
+    text-align: center;
+  }
+  
+  /* Reset */
+  blockquote {
+    padding: 0;
+    margin: 0;
+  }
