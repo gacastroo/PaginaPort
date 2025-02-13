@@ -33,7 +33,7 @@
 
 /* Hover para los elementos del nav */
 .nav-link:hover {
-    color: var(--hover-color) !important;
+    color: var(--hover-color) ;
     text-decoration: underline;
     transition: color 0.3s ease, text-decoration 0.3s ease;
 }
@@ -61,7 +61,7 @@ section#tech {
 
 
 .hero-image {
-    background-image: url('../imagenes/hero.jpg');
+    background-image: url('../imagenes/hero.jpg') ;
     background-size: cover;
     background-position: center;
     height: 100vh;
@@ -137,7 +137,7 @@ section#tech {
     }
 
     #animacionder, #animacioniz {
-        transform: none !important;
+        transform: none ;
     }
     
 
@@ -215,8 +215,8 @@ section#tech {
 
 /* ////////////////////////////////////// Modo alto contraste ///////////////////////////////////////////////////////////////////////////////////////////////// */
 .alto-contraste {
-    background-color: black !important;
-    color: var(--accent-color) !important;
+    background-color: black ;
+    color: var(--accent-color) ;
 }
 
 .alto-contraste #instagrama,#twittera,#linkedina {
@@ -225,41 +225,41 @@ section#tech {
 
 /* Encabezado */
 .alto-contraste header {
-    background-color: black !important;
-    color: var(--accent-color) !important;
+    background-color: black ;
+    color: var(--accent-color) ;
 }
 
 /* Footer */
 .alto-contraste footer {
-    background-color: black !important;
-    color: var(--accent-color) !important;
+    background-color: black ;
+    color: var(--accent-color) ;
 }
 
 /* Estilos de enlaces */
 .alto-contraste a {
-    color: var(--accent-color) !important;
+    color: var(--accent-color) ;
     text-decoration: underline;
 }
 
 .alto-contraste a:hover {
-    color: var(--ac-color-a) !important;
+    color: var(--ac-color-a) ;
 }
 
 /* Botón de accesibilidad */
 .alto-contraste #toggleMenuButton {
-    background-color: var(--accent-color) !important;
-    color: black !important;
+    background-color: var(--accent-color) ;
+    color: black ;
 }
 
 /* Menú de accesibilidad */
 .alto-contraste #menuOpciones {
-    background-color: black !important;
-    color: var(--accent-color) !important;
+    background-color: black ;
+    color: var(--accent-color) ;
 }
 
 .alto-contraste #menuOpciones button {
-    background-color: var(--accent-color) !important;
-    color: black !important;
+    background-color: var(--accent-color) ;
+    color: black ;
 }
 
 .alto-contraste #quote {
@@ -274,58 +274,58 @@ section#tech {
 
 /* Tarjetas de proyectos */
 .alto-contraste .trabajo-card {
-    background-color: black !important;
-    color: var(--accent-color) !important;
-    border: 2px solid var(--accent-color) !important;
+    background-color: black ;
+    color: var(--accent-color) ;
+    border: 2px solid var(--accent-color) ;
 }
 
 .alto-contraste iframe {
-    border: 3px solid var(--accent-color) !important ;
+    border: 3px solid var(--accent-color)  ;
 }
 
 
 .alto-contraste #botonenviar {
     background-color: black;
     color: var(--accent-color);
-    border: 2px solid var(--accent-color) !important;
+    border: 2px solid var(--accent-color) ;
 }
 
 /* Párrafos del footer */
 .alto-contraste footer p {
-    color: var(--accent-color) !important;
+    color: var(--accent-color) ;
 }
 
 /* Íconos */
 .alto-contraste i {
-    color: var(--accent-color) !important;
+    color: var(--accent-color) ;
 }
 
 /* Input y textarea en modo alto contraste */
 .alto-contraste input,
 .alto-contraste textarea {
-    background-color: black !important;
-    color: var(--accent-color) !important;
-    border: 1px solid var(--accent-color) !important;
+    background-color: black ;
+    color: var(--accent-color) ;
+    border: 1px solid var(--accent-color) ;
 }
 
 
 
 /* Modo alto contraste para los iconos flotantes */
 .alto-contraste #redes a {
-    background-color: black !important; /* Fondo negro */
-    border: 2px solid var(--accent-color) !important; /* Borde amarillo */
+    background-color: black ; /* Fondo negro */
+    border: 2px solid var(--accent-color) ; /* Borde amarillo */
 }
 
 /* Cambiar color de los íconos dentro de los botones */
 .alto-contraste #redes i {
-    color: var(--accent-color) !important;
+    color: var(--accent-color) ;
 }
 
 /* Aplica hover al enlace y al icono dentro */
 .alto-contraste #redes a:hover,
 .alto-contraste #redes a:hover i {
-    background-color: var(--accent-color) !important;
-    color: black !important;
+    background-color: var(--accent-color) ;
+    color: black ;
     transform: scale(1.2);
 }
 
@@ -368,7 +368,7 @@ section#tech {
 
 /* En modo oscuro, el sol será amarillo */
 [data-theme='dark'] #modeIcon {
-    color: var(--accent-color) !important;
+    color: var(--accent-color) ;
 }
 
 
