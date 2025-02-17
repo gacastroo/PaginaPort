@@ -346,6 +346,54 @@ section#tech {
     background-color:black;
   }
 
+.alto-contraste #redes a {
+    background-color: black !important;
+    border: 2px solid var(--accent-color) !important;
+    border-radius: 50% !important;
+}
+
+.alto-contraste #redes i {
+    color: var(--accent-color) !important;
+}
+
+.alto-contraste #redes a:hover,
+.alto-contraste #redes a:hover i {
+    background-color: var(--accent-color) !important;
+    color: black !important;
+    transform: scale(1.2);
+} 
+
+.alto-contraste header {
+    background-color: black !important;
+    color: var(--accent-color) !important;
+}
+
+.alto-contraste navbar {
+    background-color: black !important;
+}
+
+.alto-contraste .navbar-nav .nav-link {
+    color: var(--accent-color) !important;
+}
+
+.alto-contraste .navbar-nav .nav-link:hover {
+    color: var(--ac-color-a) !important;
+    text-decoration: underline;
+}
+
+.alto-contraste footer a {
+    color: var(--accent-color) !important;
+}
+
+.alto-contraste footer a:hover {
+    color: var(--ac-color-a) !important;
+}
+
+.alto-contraste footer {
+    background-color: black !important; /* Forzamos el color negro */
+}
+
+
 
   
 
@@ -370,8 +418,3 @@ section#tech {
 [data-theme='dark'] #modeIcon {
     color: var(--accent-color) ;
 }
-
-
-
-
-
