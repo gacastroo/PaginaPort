@@ -396,9 +396,9 @@ section#tech {
 }
 
 .alto-contraste .quote, .alto-contraste .name{
-    background-color: black;
-    color: var(--text-color-dark);
-    border: solid var(--accent-color) 2px;
+    background-color: black !important;
+    color: var(--text-color-dark) !important;
+    border: solid var(--accent-color) 2px !important;
 }
 
 .alto-contraste footer a {
