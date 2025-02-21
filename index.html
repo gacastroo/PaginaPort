@@ -1,5 +1,12 @@
 <!DOCTYPE html>
 <html lang="es">
+    <!-- Boton hacia arriba -->
+    <a class="ir-arriba" href="#" title="Volver arriba">
+        <span class="fa-stack">
+            <i class="fa fa-circle fa-stack-2x"></i>
+            <i class="fa fa-arrow-up fa-stack-1x fa-inverse"></i>
+        </span>
+    </a>    
     <head>
         <meta charset="UTF-8">
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -68,7 +75,6 @@
                         aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>
-                    <a>#GuillermoCastro</a>                 
                     <!-- Menú horizontal -->
                     <div class="collapse navbar-collapse justify-content-end" id="navbarNav">
                         <ul class="navbar-nav flex-row">
@@ -116,10 +122,8 @@
                     <a href="#trabajos" id="Verproyectos" class="btn btn-primary btn-lg mt-4">Ver Proyectos</a>
                 </section>
             </section>
-            <a id="estudios"></a>
-            <br>
                 <!-- Sección de Estudios -->
-                <section>
+                <section id="estudios">
                     <div class="container">
                         <h1 class="text-center mb-4" id="Estudiostt"></h1>
                         <div class="row align-items-center">
@@ -137,13 +141,11 @@
                             </div>
                         </div>
                     </div>
-                    <a id="trabajos"></a>
                 </section>
-
             <!-- Sección de Proyectos -->
             <!-- Sección de Proyectos -->
 
-            <section class="py-5">
+            <section id="trabajos" class="py-5">
                 <div class="container">
                     <h1 class="trabajos-title text-center mb-4"></h1>
                     
@@ -193,10 +195,9 @@
                         </div>
                     </div>
                 </div>
-                <a id="about"></a>
             </section>
             <!-- Sección de About -->
-            <section class="py-5">
+            <section id="about" class="py-5">
                 <div class="container">
                     <h1 class="about-title text-center mb-5"></h1>
                     <div class="row align-items-center">
@@ -209,11 +210,10 @@
                         </div>
                     </div>
                 </div>
-                <a id="contacto"></a>
             </section>
 
             <!-- Sección de Contacto -->
-            <section class="py-5">
+            <section id="contacto" class="py-5">
                 <div class="container">
                     <h1 class="contacto-title text-center mb-4"></h1>
                     <div class="row align-items-center">
@@ -233,22 +233,24 @@
                             <p id="email"></p>
                         </div>
                         
-                        <!-- Formulario de contacto -->
                         <div class="col-md-7">
-                            <form action="#" method="POST" class="contact-form">
+                            <form action="https://www.google.es" method="POST" class="contact-form" id="contactForm">
                                 <div class="mb-3">
-                                    <label for="nombre" class="form-label" id="nombre1"></label>
-                                    <input type="text" id="nombre" name="nombre" class="form-control" required>
+                                    <label for="nombre" class="form-label" id="nombre1">Nombre</label>
+                                    <input type="text" id="nombre" name="nombre" class="form-control">
+                                    <div class="invalid-feedback"></div>
                                 </div>
                                 <div class="mb-3">
-                                    <label for="email" class="form-label" id="email1"></label>
+                                    <label for="email" class="form-label" id="email1">Email</label>
                                     <input type="email" id="email" name="email" class="form-control" required>
-                                </div>
+                                    <div class="invalid-feedback"></div>
+                                  </div>                                  
                                 <div class="mb-3">
-                                    <label for="mensaje" class="form-label" id="mensaje1"></label>
-                                    <textarea id="mensaje" name="mensaje" class="form-control" rows="4" required></textarea>
+                                    <label for="mensaje" class="form-label" id="mensaje1">Mensaje</label>
+                                    <textarea id="mensaje" name="mensaje" class="form-control" rows="4"></textarea>
+                                    <div class="invalid-feedback"></div>
                                 </div>
-                                <button type="submit" class="btn btn-primary w-100" id="botonenviar"></button>
+                                <button type="submit" class="btn btn-primary w-100" id="botonenviar">Enviar</button>
                             </form>
                         </div>
                     </div>
@@ -322,5 +324,6 @@
         <script src="./js/quotes.js"></script>
         <script src="https://cdnjs.cloudflare.com/ajax/libs/i18next/23.6.0/i18next.min.js"></script>
         <script src="./js/i18n.js"></script>
+        <script src="./js/validateform.js"></script>
     </body>
 </html>

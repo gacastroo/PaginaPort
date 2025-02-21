@@ -1,5 +1,4 @@
 /* Definición de variables de color */
-/* Definición de variables de color */
 :root {
     --primary-color: #1E88E5; /* Azul ligeramente más oscuro */
     --secondary-color: #B0B0B0; /* Gris más neutro */
@@ -21,12 +20,22 @@
     box-sizing: border-box;
 }
 
+/* Agregar espacio extra antes de cada sección */
+section::before {
+    content: "";
+    display: block;
+    height: 120px; /* Ajusta según la altura de tu header */
+    margin-top: -120px;
+    visibility: hidden;
+}
+
+
 
 #instagram:hover, #twitter:hover, #linkedin:hover {
-    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transform: scale(1.1); 
 }
 #Verproyectos:hover {
-    transform: scale(1.5); /* (150% zoom - Note: if the zoom is too large, it will go outside of the viewport) */
+    transform: scale(1.1);
 
 }
 
@@ -57,6 +66,51 @@ section#tech {
     display: flex;
     align-items: center;
 }
+
+#toggleMenuButton {
+    background-color: rgb(168, 67, 67);
+    color: var(--text-color-light);
+    font-size: 1rem;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    padding: 0.5rem 1rem;
+    cursor: pointer;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+    display: flex;
+    align-items: center;
+    gap: 0.7rem;
+    margin-right: 140px;
+}
+
+#toggleMenuButton:hover {
+    background-color: var(--bg-color-acces);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
+}
+
+#toggleMenuButton i {
+    font-size: 2.5rem;
+}
+
+#toggleMode {
+    background: none;
+    border: none;
+    font-size: 1.5rem;
+    cursor: pointer;
+    transition: color 0.3s ease, transform 0.3s ease;
+}
+
+#toggleMode i {
+    color: white; /* Luna blanca en modo claro */
+    transition: color 0.3s ease;
+}
+
+#toggleMode:hover {
+    transform: scale(1.2);
+}
+
 
 
 
@@ -125,70 +179,6 @@ section#tech {
     right: 5px;
 }
 
-
-@media (max-width: 768px) {
-    .estudios-images {
-        flex-direction: column;
-        margin-bottom: 2rem;
-    }
-    
-    #redes {
-        display: none;
-    }
-
-    #animacionder, #animacioniz {
-        transform: none ;
-    }
-    
-
-    .us_mobile_hide {
-        display: none;
-    }
-
-}
-
-[data-theme='dark'] {
-    background-color: var(--dark-background);
-    color: var(--text-color-dark);
-}
-
-[data-theme='dark'] .trabajo-card {
-    background-color: var(--dark-card-background);
-    color: var(--text-color-dark);
-}
-
-#toggleMenuButton {
-    background-color: rgb(168, 67, 67);
-    color: var(--text-color-light);
-    font-size: 1rem;
-    font-weight: bold;
-    border: none;
-    border-radius: 8px;
-    padding: 0.5rem 1rem;
-    cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-    transition: all 0.3s ease;
-    display: flex;
-    align-items: center;
-    gap: 0.7rem;
-    margin-right: 140px;
-}
-
-#toggleMenuButton:hover {
-    background-color: var(--bg-color-acces);
-    transform: translateY(-2px);
-    box-shadow: 0 6px 12px rgba(0, 0, 0, 0.2);
-}
-
-#toggleMenuButton i {
-    font-size: 2.5rem;
-}
-
-
-#animacionder:hover,#animacioniz:hover {
-    transform:scale(1.2);
-}
-
 .map-container {
     display: flex;
     justify-content: center;
@@ -213,6 +203,30 @@ section#tech {
     transform: scale(1.02); /* Ligero aumento de tamaño */
 }
 
+
+/* //////////////////////////////////////////MODO OSCURO/////////////////////////////////////////////////////////*/
+[data-theme='dark'] {
+    background-color: var(--dark-background);
+    color: var(--text-color-dark);
+}
+
+[data-theme='dark'] .trabajo-card {
+    background-color: var(--dark-card-background);
+    color: var(--text-color-dark);
+}
+
+
+/* En modo oscuro, el sol será amarillo */
+[data-theme='dark'] #modeIcon {
+    color: var(--accent-color) ;
+}
+
+/*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+
+
+#animacionder:hover,#animacioniz:hover {
+    transform:scale(1.2);
+}
 /* ////////////////////////////////////// Modo alto contraste ///////////////////////////////////////////////////////////////////////////////////////////////// */
 .alto-contraste {
     background-color: black ;
@@ -381,6 +395,12 @@ section#tech {
     text-decoration: underline;
 }
 
+.alto-contraste .quote, .alto-contraste .name{
+    background-color: black;
+    color: var(--text-color-dark);
+    border: solid var(--accent-color) 2px;
+}
+
 .alto-contraste footer a {
     color: var(--accent-color) !important;
 }
@@ -393,28 +413,44 @@ section#tech {
     background-color: black !important; /* Forzamos el color negro */
 }
 
-
-
-  
-
-#toggleMode {
-    background: none;
-    border: none;
-    font-size: 1.5rem;
-    cursor: pointer;
-    transition: color 0.3s ease, transform 0.3s ease;
+/* Ajustar el color de los iconos de la flecha */
+.alto-contraste .ir-arriba i.fa-arrow-up {
+    color: black !important; /* Cambia el color de la flecha a negro */
 }
 
-#toggleMode i {
-    color: white; /* Luna blanca en modo claro */
-    transition: color 0.3s ease;
+/*Flecha para hacer la pagina hacia arriba*/
+.ir-arriba{
+    display:none;
+    background-repeat:no-repeat;
+    font-size:20px;
+    color:black;
+    cursor:pointer;
+    position:fixed;
+    bottom:10px;
+    right:10px;
+    z-index:2;
+  }
+
+@media (max-width: 768px) {
+    .estudios-images {
+        flex-direction: column;
+        margin-bottom: 2rem;
+    }
+    
+    #redes {
+        display: none;
+    }
+
+    #animacionder:hover, #animacioniz:hover {
+        transform: none !important;
+    }
+    
+
+    .us_mobile_hide {
+        display: none;
+    }
 }
 
-#toggleMode:hover {
-    transform: scale(1.2);
-}
 
-/* En modo oscuro, el sol será amarillo */
-[data-theme='dark'] #modeIcon {
-    color: var(--accent-color) ;
-}
+
+
