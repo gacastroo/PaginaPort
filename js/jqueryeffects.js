@@ -16,7 +16,7 @@ $(document).ready(function () {
                 {
                     scrollTop: target.offset().top
                 },
-                600 // Duración de la animación
+                350 // Duración de la animación
             );
         }
     });

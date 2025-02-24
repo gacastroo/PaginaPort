@@ -22,13 +22,14 @@ document.addEventListener("DOMContentLoaded", function () {
                     "github": "GitHub",
                     "name": "Guillermo Castro",
                     "send": "Enviar",
-                    "degree1": "Grado Superior: Animación 3D, juegos y entornos interactivos",
-                    "degree2": "Grado Superior: Desarrollo de Aplicaciones Web",
+                    "degree1": "Grado Superior: <strong>Animación 3D, juegos y entornos interactivos</strong>",
+                    "degree2": "Grado Superior: <strong>Desarrollo de Aplicaciones Web</strong>",
                     "aboutMe": "Soy un desarrollador web y animador 3D con pasión por crear experiencias visuales impactantes y funcionales.",
                     "name2": "Nombre: ",
                     "email": "Correo Electrónico: ",
                     "message": "Mensaje: ",
-                    "copyr": "2025 Portafolio. Todos los derechos reservados."
+                    "copyr": "2025 Portafolio. Todos los derechos reservados.",
+                    "textoPopUpEn": "Hey 👋 &nbsp; <strong>Muchas gracias</strong> por ver <strong>mi portfolio</strong>. No olvides seguirme en las <strong>redes</strong> &#128513;<br> ⬅️"
                 }
             },
             en: {
@@ -59,7 +60,8 @@ document.addEventListener("DOMContentLoaded", function () {
                     "message": "Message: ",
                     "studiesFooter":"Studies",
                     "proyectosFooter":"Proyectos",
-                    "copyr": "2025 Portafolio. All rights reserved."
+                    "copyr": "2025 Portafolio. All rights reserved.",
+                    "textoPopUpEn": "Hey 👋 &nbsp; <strong>Thank you so much</strong> for checking out <strong>my portfolio</strong>. Don't forget to follow me on <strong>social media</strong> 😁 </br> ⬅️"
                 }
             }
         }
@@ -107,6 +109,12 @@ document.addEventListener("DOMContentLoaded", function () {
         document.querySelector("#contactoFooter").textContent = i18next.t("contact"),
 
         document.querySelector("#copyr").textContent = "©" + i18next.t("copyr")
+        document.querySelector("#textoPopUp").textContent = i18next.t("textoPopUpEn")
+        document.querySelector("#textoPopUp").innerHTML = i18next.t("textoPopUpEn");
+        document.querySelector("#textoPopUp").innerHTML = i18next.t("textoPopUpEn");
+        document.querySelector("#degree1").innerHTML = i18next.t("degree1");
+        document.querySelector("#degree2").innerHTML = i18next.t("degree2");
+
     }
 
     document.getElementById("changeLanguage").addEventListener("click", function () {

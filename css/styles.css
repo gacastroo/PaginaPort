@@ -20,11 +20,10 @@
     box-sizing: border-box;
 }
 
-/* Agregar espacio extra antes de cada sección */
 section::before {
     content: "";
     display: block;
-    height: 120px; /* Ajusta según la altura de tu header */
+    height: 120px; 
     margin-top: -120px;
     visibility: hidden;
 }
@@ -221,6 +220,26 @@ section#tech {
     color: var(--accent-color) ;
 }
 
+[data-theme='dark'] .c-fe30__inner {
+    color: var(--text-color-dark);
+    background-color: var(--dark-background);
+    border: solid black 4px;
+}
+
+[data-theme='dark'] .c-fe30__close {
+    color: var(--text-color-dark);
+}
+
+
+[data-theme='dark'] .c-fe30__inner {
+    border: solid black 4px;
+}
+
+[data-theme='dark'] .c-fe30__photo {
+    border: solid black 4px;
+}
+
+
 /*////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
 
 
@@ -413,6 +432,20 @@ section#tech {
     background-color: black !important; /* Forzamos el color negro */
 }
 
+.alto-contraste .c-fe30__inner  {
+    background-color: black;
+    color: var(--text-color-dark);
+    border: solid var(--accent-color) 2px;
+}
+
+.alto-contraste .c-fe30__photo {
+    border: solid var(--accent-color) 4px;
+}
+
+.alto-contraste .c-fe30__close {
+    color: var(--accent-color);
+}
+
 /* Ajustar el color de los iconos de la flecha */
 .alto-contraste .ir-arriba i.fa-arrow-up {
     color: black !important; /* Cambia el color de la flecha a negro */
@@ -453,4 +486,90 @@ section#tech {
 
 
 
+/*//////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////////*/
+/* Estilos para el contenedor c-fe30 */
+.c-fe30 {
+    bottom: 20px; /* margen desde el fondo */
+    right: 20px;  /* margen desde el lado derecho */
+    opacity: 0;
+    position: fixed;
+    text-align: center;
+    transition: opacity 0.5s ease;
+}
 
+.c-fe30.visible {
+    animation: fe30-anime 0.5s cubic-bezier(0.215, 0.61, 0.355, 1) forwards;
+    opacity: 1;
+}
+
+/* Estilos para el interior del componente */
+.c-fe30__inner {
+    background-color: #fff;
+    border-radius: 7px;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.1);
+    color: #2d2f31;
+    font-size: 14px;
+    line-height: 1.45;
+    margin: 10px;
+    padding: 40px 20px 10px;
+    position: relative;
+    transform: perspective(1000px) rotateX(0) rotateY(0) scale3d(1, 1, 1);
+    transform-style: preserve-3d;
+    width: 250px;
+}
+
+/* Botón de cierre */
+.c-fe30__close {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    background: transparent;
+    border: none;
+    font-size: 18px;
+    cursor: pointer;
+    color: #2d2f31;
+}
+
+/* Foto de autor */
+.c-fe30__photo {
+    border: 3px solid #fff;
+    border-radius: 50%;
+    box-shadow: 0 0 15px 1px rgba(0, 0, 0, 0.1);
+    display: block;
+    height: 80px;
+    position: absolute;
+    top: -50px;
+    left: 50%;
+    overflow: hidden;
+    transform: translateX(-50%) translateZ(26px);
+    width: 80px;
+}
+
+/* Imagen dentro de la foto */
+.c-fe30__img {
+    height: 100%;
+    object-fit: cover;
+    width: 100%;
+}
+
+/* Estilo para el enlace interno */
+.c-fe30__link {
+    color: #c584f8;
+    display: inline-block;
+    transform: translateZ(18px);
+}
+.c-fe30__link:hover {
+    text-decoration: none;
+}
+
+/* Keyframes para la animación de entrada */
+@keyframes fe30-anime {
+    0% {
+      opacity: 0;
+      transform: translate(0, 100%);
+    }
+    100% {
+      opacity: 1;
+      transform: translate(0, 0);
+    }
+}
