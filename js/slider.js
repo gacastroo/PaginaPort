@@ -1,7 +1,8 @@
 document.addEventListener("DOMContentLoaded", () => {
     const container = document.querySelector("#container");
     const item = document.querySelector("#item");
-    
+    const projectCards = document.querySelectorAll('.trabajo-card');
+
     // Elementos del contenido
     const img1 = document.querySelector("#img1");
     const img2 = document.querySelector("#img2");
@@ -21,12 +22,36 @@ document.addEventListener("DOMContentLoaded", () => {
     const descs3D = ["Lorem ipsum dolor sit amet...", "Lorem ipsum dolor sit amet...", "Lorem ipsum dolor sit amet..."];
     const descsWeb = ["Juego de memoria interactivo...", "Simulación de pagos digitales...", "Explora personajes y habilidades..."];
 
+    //HREF
+
     let isWeb = false; // Estado del switch
     
     container.addEventListener("click", () => {
         isWeb = !isWeb;
         updateSwitchState();
     });
+
+  
+    console.log('Total project cards found:', projectCards.length);
+    projectCards.forEach((card, index) => {
+      card.addEventListener('mouseenter', function() {
+        console.log(`Mouse entered card ${index}`);
+        projectCards.forEach(otherCard => {
+          if (otherCard !== card) {
+            otherCard.classList.add('blur');
+          }
+        });
+      });
+      
+      card.addEventListener('mouseleave', function() {
+        console.log(`Mouse left card ${index}`);
+        projectCards.forEach(otherCard => {
+          if (otherCard !== card) {
+            otherCard.classList.remove('blur');
+          }
+        });
+      });
+    });  
 
     function updateSwitchState() {
         if (isWeb) {

@@ -33,10 +33,13 @@ section::before {
 #instagram:hover, #twitter:hover, #linkedin:hover {
     transform: scale(1.1); 
 }
-#Verproyectos:hover {
-    transform: scale(1.1);
 
-}
+.trabajo-card.blur {
+    filter: blur(3px);
+    transition: filter 0.3s ease;
+  }
+  
+
 
 
 /* Hover para los elementos del nav */
@@ -132,17 +135,21 @@ section#tech {
 }
 
 .trabajo-card {
+    position: relative;
     padding: 2%;
     border-radius: 8px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     background-color: var(--light-background);
+    flex-shrink: 0;
+    margin: 20px;
+    box-shadow: 0 0 5px 5px rgba(0, 0, 0, 0.5);
 }
 
 .trabajo-card:hover {
-    transform: translateY(-10px) scale(1.05);
+    transform: translateY(-10px) scale(1.3);
     box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+    z-index: 10; /* Se muestra por encima de las demás */
 }
 
 .card-img {
@@ -177,6 +184,7 @@ section#tech {
 .label-right {
     right: 5px;
 }
+  
 
 .map-container {
     display: flex;
@@ -451,6 +459,15 @@ section#tech {
     color: black !important; /* Cambia el color de la flecha a negro */
 }
 
+.alto-contraste .navbar-toggler {
+    color: var(--accent-color);
+}
+
+.alto-contraste .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='%23ffff00' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+  }
+  
+
 /*Flecha para hacer la pagina hacia arriba*/
 .ir-arriba{
     display:none;
@@ -475,6 +492,10 @@ section#tech {
     }
 
     #animacionder:hover, #animacioniz:hover {
+        transform: none !important;
+    }
+
+    .trabajo-card:hover {
         transform: none !important;
     }
     
